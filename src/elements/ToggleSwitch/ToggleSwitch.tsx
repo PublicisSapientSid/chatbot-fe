@@ -2,12 +2,7 @@
 import React from "react";
 import styles from "./ToggleSwitch.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faKeyboard,
-  faMicrophoneAlt,
-  faMicrophoneSlash,
-  faPaperPlane,
-} from "@fortawesome/free-solid-svg-icons";
+import { faKeyboard, faMicrophoneAlt } from "@fortawesome/free-solid-svg-icons";
 
 interface IToggleSwitch {
   labels: string[];
@@ -36,12 +31,10 @@ export const ToggleSwitch = ({ labels }: IToggleSwitch) => {
       <div className={styles.switchWrapper}>
         <div className={styles.switch}>
           <div>
-            <FontAwesomeIcon icon={faKeyboard} size="lg" />
-            {label1}
+            <FontAwesomeIcon icon={faKeyboard} size="lg" /> {label1}
           </div>
           <div>
-            <FontAwesomeIcon icon={faMicrophoneAlt} size="lg" />
-            {label2}
+            <FontAwesomeIcon icon={faMicrophoneAlt} size="lg" /> {label2}
           </div>
         </div>
       </div>

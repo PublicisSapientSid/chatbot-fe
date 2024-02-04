@@ -45,6 +45,10 @@ const ChatWindow: React.FC = () => {
             lastBubble={chats.length - 1 === index}
             firstBubble={index === 0}
             text={chat?.content?.message}
+            buttons={
+              chat?.content?.responseCard?.genericAttachments[0]?.buttons
+            }
+            sendAndReceiveChat={sendAndReceiveChat}
           />
         );
       })}

@@ -41,3 +41,21 @@
   left: -2rem;
   width: 1.5rem;
 }
+
+.buttonChoices {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.choiceButton {
+  background-color: white;
+  border-radius: 2rem;
+  display: inline;
+  font-size: 0.66rem;
+  margin: 0.5rem;
+  flex-grow: 1;
+  text-align: center;
+  padding: 0.5rem;
+  cursor: pointer;
+}
