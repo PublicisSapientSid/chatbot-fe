@@ -1,0 +1,27 @@
+.chatBubble {
+  display: block;
+  color: var(--color-neutral-200);
+  font: var(--font-med);
+  padding: 0.875rem 1.5rem;
+  margin: 1rem auto;
+  min-width: 5rem;
+  max-width: 16rem;
+  clear: both;
+}
+
+.user {
+  background: linear-gradient(
+    var(--color-light-blue-100),
+    var(--color-neutral-500)
+  );
+  border-radius: 0.875rem 0.875rem 0 0.875rem;
+  float: right;
+  margin-right: 1rem;
+}
+
+.maya {
+  background: var(--color-cream-100);
+  border-radius: 0 0.875rem 0.875rem 0.875rem;
+  float: left;
+  margin-left: 1rem;
+}

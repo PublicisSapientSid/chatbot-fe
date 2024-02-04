@@ -4,6 +4,16 @@
   --color-primary-100: #7a5bfe;
   --color-neutral-100: white;
   --color-gray-100: #303437;
+  --color-cream-100: #f2f2f2;
+  --color-light-blue-100: #dee2fb;
+  --color-light-blue-alpha: #dee2fb54;
+  --color-neutral-alpha: #f8f9ff60;
+  --color-neutral-500: #f8f9ff;
+  --color-neutral-200: #747474;
+
+  --font-small: 400 0.875rem/1.25rem;
+  --font-med: 400 1rem/1.5rem;
+  --font-large: 600 1.5rem/2rem;
 }
 
 * {
