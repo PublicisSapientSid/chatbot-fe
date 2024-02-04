@@ -3,6 +3,7 @@ import ChatBubble from "../../elements/ChatBubble/ChatBubble";
 import styles from "./ChatWindow.module.css";
 import useAxiosPost from "../../data-service/hooks/useAxiosPost";
 import { GlobalContext, updateChat } from "../../data-service/global-context";
+import { InputText } from "../../elements/InputText/InputText";
 
 const ChatWindow: React.FC = () => {
   const { sendPostRequest, loading, error } = useAxiosPost();
@@ -10,15 +11,11 @@ const ChatWindow: React.FC = () => {
 
   const { chats } = state;
 
-  useEffect(() => {
-    sendAndReceiveChat();
-  }, []);
-
-  const sendAndReceiveChat = async () => {
+  const sendAndReceiveChat = async (message: string) => {
     try {
       const response = await sendPostRequest("/chat", {
         sender: "user",
-        content: { message: "Hello" },
+        content: { message },
       });
       console.log({ response });
       if (response) {
@@ -31,11 +28,17 @@ const ChatWindow: React.FC = () => {
 
   return (
     <div className={styles.chatWindow}>
-      {chats.map((chat) => {
+      {chats.map((chat, index) => {
         return (
-          <ChatBubble sender={chat?.sender} text={chat?.content?.message} />
+          <ChatBubble
+            sender={chat?.sender}
+            key={chat?.content?.message! + index}
+            lastBubble={chats.length - 1 === index}
+            text={chat?.content?.message}
+          />
         );
       })}
+      <InputText sendAndReceiveChat={sendAndReceiveChat} />
     </div>
   );
 };

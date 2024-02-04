@@ -1,9 +1,9 @@
 .chatWindow {
   display: block;
-  background: linear-gradient(
-    var(--color-light-blue-alpha),
-    var(--color-neutral-alpha)
-  );
+  /* background: linear-gradient(
+    var(--color-neutral-alpha),
+    var(--color-light-blue-alpha)
+  ); */
   height: 100vh;
   width: 100vw;
 }
