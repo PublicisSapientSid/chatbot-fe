@@ -1,0 +1,2 @@
+export const POST_NEW_CHAT_MESSAGE = "POST_NEW_CHAT_MESSAGE";
+export const UPDATE_CHAT = "UPDATE_CHAT";
