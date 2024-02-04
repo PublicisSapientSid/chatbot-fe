@@ -1,6 +1,13 @@
 // create a toggleswitch element which toggles a button
 import React from "react";
 import styles from "./ToggleSwitch.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faKeyboard,
+  faMicrophoneAlt,
+  faMicrophoneSlash,
+  faPaperPlane,
+} from "@fortawesome/free-solid-svg-icons";
 
 interface IToggleSwitch {
   labels: string[];
@@ -28,8 +35,14 @@ export const ToggleSwitch = ({ labels }: IToggleSwitch) => {
       <label htmlFor={`switch${label2}`}>{label2}</label>
       <div className={styles.switchWrapper}>
         <div className={styles.switch}>
-          <div>{label1}</div>
-          <div>{label2}</div>
+          <div>
+            <FontAwesomeIcon icon={faKeyboard} size="lg" />
+            {label1}
+          </div>
+          <div>
+            <FontAwesomeIcon icon={faMicrophoneAlt} size="lg" />
+            {label2}
+          </div>
         </div>
       </div>
     </div>

@@ -15,7 +15,7 @@
   width: 90%;
   padding: 1rem;
   margin: 0 auto;
-  box-shadow: 0 0.125rem 0.25rem 0 var(--color-light-blue-100);
+  box-shadow: 0 0 1.5rem var(--color-primary-alpha);
   border-radius: 2rem;
   border: none;
 }

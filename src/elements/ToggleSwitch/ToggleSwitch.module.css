@@ -1,14 +1,15 @@
 .switchesContainer {
-  width: 16rem;
+  width: 12rem;
   position: relative;
   display: flex;
   padding: 0;
-  position: relative;
+  position: absolute;
   background: var(--color-primary-100);
+  box-shadow: 0 0 1.5rem var(--color-primary-alpha);
   line-height: 3rem;
   border-radius: 3rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 2rem;
+  margin-top: 2rem;
 }
 
 .switchesContainer input {

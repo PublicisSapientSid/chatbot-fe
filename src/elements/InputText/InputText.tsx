@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "./InputText.module.css";
+import {
+  GlobalContext,
+  postNewChatMessage,
+} from "../../data-service/global-context";
 
 export const InputText = ({
   sendAndReceiveChat,
@@ -10,6 +14,7 @@ export const InputText = ({
   sendAndReceiveChat: (message: string) => void;
 }) => {
   const [value, setValue] = useState("");
+  const { dispatch } = useContext(GlobalContext);
 
   const handleInputChange = (e: any) => {
     setValue(e.target.value);
@@ -18,6 +23,12 @@ export const InputText = ({
   const handleButtonClick = () => {
     setValue("");
     sendAndReceiveChat(value);
+    dispatch(
+      postNewChatMessage({
+        sender: "user",
+        content: { message: value },
+      })
+    );
   };
 
   return (

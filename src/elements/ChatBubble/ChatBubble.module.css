@@ -7,6 +7,7 @@
   min-width: 5rem;
   max-width: 16rem;
   clear: both;
+  position: relative;
 }
 
 .user {
@@ -14,18 +15,29 @@
     var(--color-light-blue-100),
     var(--color-neutral-500)
   );
-  border-radius: 0.875rem 0.875rem 0 0.875rem;
+  border-radius: 1.5rem 1.5rem 0 1.5rem;
   float: right;
   margin-right: 1rem;
 }
 
 .maya {
   background: var(--color-cream-100);
-  border-radius: 0 0.875rem 0.875rem 0.875rem;
+  border-radius: 0 1.5rem 1.5rem 1.5rem;
   float: left;
-  margin-left: 1rem;
+  margin-left: 3.5rem;
 }
 
 .lastBubble {
   margin-bottom: 10rem;
+}
+
+.firstBubble {
+  margin-top: 12rem;
+}
+
+.avatarLogo {
+  position: absolute;
+  top: 0;
+  left: -2rem;
+  width: 1.5rem;
 }

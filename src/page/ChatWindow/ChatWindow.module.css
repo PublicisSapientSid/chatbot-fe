@@ -7,3 +7,9 @@
   height: 100vh;
   width: 100vw;
 }
+
+.scrollIndicator {
+  display: block;
+  padding: 0.875rem 1.5rem;
+  clear: both;
+}
